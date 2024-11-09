@@ -50,12 +50,15 @@ You need to connect mongoDB later
 */
 
 
+// SET APPLICATION STORAGE
+app.use(express.static('storage')); // The file will recognize randomly
+
+
 // SET API ROUTES
 app.use('/api', router);
 
 
-// SET APPLICATION STORAGE
-app.use(express.static('storage')); // The file will recognize randomly
+
 
 
 // *** RUN YOU APPLICATIONS ***
