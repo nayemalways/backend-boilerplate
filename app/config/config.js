@@ -6,15 +6,16 @@ export const MONOGDB_CONNECTION = "mongodb+srv://nishanahmed:OWkuWunl7pJvLVNF@cl
 
 
 // JWT TOKEN
-export const JWT_SECRET = 'my_super_secret_jwt_key_123!';
+export const JWT_SECRET = '5EC7CEFA1BE7C9354A639369A2AA8';
 export const JWT_EXPIRATION_TIME = 60*60*24*30; // (30 days)
 
 
 // EMAIL
-export const EMAIL_HOST = "";
-export const EMAIL_PORT = "";
-export const EMAIL_USER = "";
-export const EMAIL_PASSWORD = "";
+export const EMAIL_HOST = "smtp.titan.email";
+export const EMAIL_PORT = "465";
+export const EMAIL_USER = "support@laravelpoint.com";
+export const EMAIL_PASSWORD = "Rup77_4827";
+export const MAIL_ENCRYPTION="ssl";
 
 // JSON SIZE
 export const MAX_JSON_SIZE = "50mb";

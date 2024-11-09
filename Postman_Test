@@ -1,0 +1,250 @@
+{
+	"info": {
+		"_postman_id": "56b19014-2736-4022-bc8c-90ab8b232c23",
+		"name": "Express Project boilerplate",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38180156"
+	},
+	"item": [
+		{
+			"name": "createTask",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5050/api/createTask",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"api",
+						"createTask"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "readTask",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5050/api/readTask",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"api",
+						"readTask"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateTask",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5050/api/updateTask",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"api",
+						"updateTask"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteTask",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5050/api/deleteTask",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"api",
+						"deleteTask"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "File Upload",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "postman-cloud:///1ef90442-9b41-4ba0-bfd1-16c15a9f4a2c"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5050/api/upload",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"api",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Token Encode",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "postman-cloud:///1ef90442-9b41-4ba0-bfd1-16c15a9f4a2c"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5050/api/token-encode",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"api",
+						"token-encode"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5050/api/token-decode",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"api",
+						"token-decode"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Email Sender",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5050/api/email-send",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"api",
+						"email-send"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Auth middleware check",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5050/api/profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"api",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cookie set",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5050/api/cookie-set",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"api",
+						"cookie-set"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cookie Remove",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5050/api/cookie-remove",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"api",
+						"cookie-remove"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
