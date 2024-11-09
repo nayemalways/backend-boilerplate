@@ -45,9 +45,13 @@ app.set('etag', WEB_CACHE);
 
 
 // MONGODB CONNECTION
-/*
-You need to connect mongoDB later 
-*/
+mongoose.connect(MONOGDB_CONNECTION, {autoIndex: true})
+.then( () => {
+    console.log(`MongodB connected`);
+}).catch(error => {
+    console.log(error);
+    // test text here
+})
 
 
 // SET APPLICATION STORAGE
