@@ -50,7 +50,6 @@ mongoose.connect(MONOGDB_CONNECTION, {autoIndex: true})
     console.log(`MongodB connected`);
 }).catch(error => {
     console.log(error);
-    // test text here
 })
 
 
