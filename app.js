@@ -6,11 +6,9 @@ import rateLimit from "express-rate-limit";
 import helmet from "helmet";
 import cookieParser from "cookie-parser";
 import hpp from "hpp";
-import * as path from 'path';
 import router from "./routes/api.js";
 import fileUpload from "express-fileupload";
 import {
-    MONOGDB_CONNECTION,
     REQUEST_LIMIT_TIME,
     REQUEST_LIMIT_NUMER,
     PORT,
@@ -18,6 +16,8 @@ import {
     URL_ENCODED,
     WEB_CACHE
 } from './app/config/config.js';
+import dotenv from "dotenv";
+dotenv.config();
 
 
 
@@ -45,7 +45,7 @@ app.set('etag', WEB_CACHE);
 
 
 // MONGODB CONNECTION
-mongoose.connect(MONOGDB_CONNECTION, {autoIndex: true})
+mongoose.connect(process.env.MONGODB_CONNECTION, {autoIndex: true})
 .then( () => {
     console.log(`MongodB connected`);
 }).catch(error => {

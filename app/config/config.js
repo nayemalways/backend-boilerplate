@@ -1,38 +1,36 @@
 import * as path from 'path';
-
-
-// MONGODB CONNECTION
-export const MONOGDB_CONNECTION = "mongodb+srv://nishanahmed:OWkuWunl7pJvLVNF@cluster0.9h6vm.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+import dotenv from "dotenv";
+dotenv.config();
 
 
 // JWT TOKEN
-export const JWT_SECRET = '5EC7CEFA1BE7C9354A639369A2AA8';
-export const JWT_EXPIRATION_TIME = 60*60*24*30; // (30 days)
+export const JWT_SECRET = process.env.JWT_SECRET;
+export const JWT_EXPIRATION_TIME = process.env.JWT_EXPIRATION_TIME;
 
 
 // EMAIL
-export const EMAIL_HOST = "smtp.titan.email";
-export const EMAIL_PORT = "465";
-export const EMAIL_USER = "support@laravelpoint.com";
-export const EMAIL_PASSWORD = "Rup77_4827";
-export const MAIL_ENCRYPTION="ssl";
+export const EMAIL_HOST =process.env.EMAIL_HOST;
+export const EMAIL_PORT = process.env.EMAIL_PORT;
+export const EMAIL_USER = process.env.EMAIL_USER;
+export const EMAIL_PASSWORD = process.env.EMAIL_PASSWORD;
+export const MAIL_ENCRYPTION= process.env.MAIL_ENCRYPTION;
 
 // JSON SIZE
-export const MAX_JSON_SIZE = "50mb";
+export const MAX_JSON_SIZE = process.env.MAX_JSON_SIZE;
 
 // URL ENCODE
 export const URL_ENCODED = true;
 
 // REQUEST LIMIT
-export const REQUEST_LIMIT_TIME = 15 * 60 * 1000; // 15 MINIUTES
-export const REQUEST_LIMIT_NUMER = 3000; // IN 15 MIN
+export const REQUEST_LIMIT_TIME = process.env.REQUEST_LIMIT_TIME;
+export const REQUEST_LIMIT_NUMER = process.env.REQUEST_LIMIT_NUMER;
 
 
 // WEB CACHE
 export const WEB_CACHE = false;
 
 // PORT
-export const PORT = 5050;
+export const PORT = process.env.PORT;
 
 
 // File upload path 
