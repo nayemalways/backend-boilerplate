@@ -13,7 +13,8 @@ export const EMAIL_HOST =process.env.EMAIL_HOST;
 export const EMAIL_PORT = process.env.EMAIL_PORT;
 export const EMAIL_USER = process.env.EMAIL_USER;
 export const EMAIL_PASSWORD = process.env.EMAIL_PASSWORD;
-export const MAIL_ENCRYPTION= process.env.MAIL_ENCRYPTION;
+export const EMAIL_SECURITY = false;
+
 
 // JSON SIZE
 export const MAX_JSON_SIZE = process.env.MAX_JSON_SIZE;
@@ -37,5 +38,12 @@ export const PORT = process.env.PORT;
 export function UPLOAD_FOLDER(filename){
     return path.resolve(process.cwd(), 'storage', filename)
 }
+
+
+// EMAIL_HOST=smtp.gmail.com
+// EMAIL_PORT=587
+// EMAIL_USER=nishanahmed13913@gmail.com
+// EMAIL_PASSWORD=qeetouanmjcqqzxe
+// MAIL_ENCRYPTION=ssl
 
 

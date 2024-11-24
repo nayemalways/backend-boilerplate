@@ -20,13 +20,22 @@ export const Token_Decode = async (req, res) => {
 
 // Email sender 
 export const Email_Sender = async (req, res ) => {
-    const EmailTo = 'nishanahmed13913@gmail.com';
-    const EmailSubject = 'Project brief';
+    const EmailTo = 'mohammednayem507@gmail.com';
+    const EmailSubject = 'Job Portal';
     const EmailText = '';
-    const EmailHTMLBody =  `Our porject will be continue sooner. If you interested to go with me fell free to reply my mail`;
+    const EmailHTMLBody =  `Are you a programmer?`;
 
-    const result = Email_Send(EmailTo, EmailText, EmailSubject, EmailHTMLBody);
-    res.json({status: "Email send successfull"});
+  try {
+        const result = await Email_Send(EmailTo, EmailText, EmailSubject, EmailHTMLBody);
+        console.log(result);
+        if (result) {
+            res.json({ status: "Email sent successfully" });
+        } else {
+            res.status(500).json({ status: "Failed to send email" });
+        }
+    } catch (error) {
+        res.status(500).json({ status: "Error occurred while sending email", error: error.message });
+    };
 };
 
 
