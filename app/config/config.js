@@ -40,10 +40,3 @@ export function UPLOAD_FOLDER(filename){
 }
 
 
-// EMAIL_HOST=smtp.gmail.com
-// EMAIL_PORT=587
-// EMAIL_USER=nishanahmed13913@gmail.com
-// EMAIL_PASSWORD=qeetouanmjcqqzxe
-// MAIL_ENCRYPTION=ssl
-
-
