@@ -3,6 +3,11 @@ import dotenv from "dotenv";
 dotenv.config();
 
 
+// DATABASE INFO
+export const MONGODB_CONNECTION = process.env.MONGODB_CONNECTION;
+export const DB_USER = process.env.DB_USER;
+export const DB_PASS = process.env.DB_PASS;
+
 // JWT TOKEN
 export const JWT_SECRET = process.env.JWT_SECRET;
 export const JWT_EXPIRATION_TIME = process.env.JWT_EXPIRATION_TIME;

@@ -14,7 +14,10 @@ import {
     PORT,
     MAX_JSON_SIZE,
     URL_ENCODED,
-    WEB_CACHE
+    WEB_CACHE,
+    MONGODB_CONNECTION,
+    DB_USER,
+    DB_PASS
 } from './app/config/config.js';
 import dotenv from "dotenv";
 dotenv.config();
@@ -45,12 +48,16 @@ app.set('etag', WEB_CACHE);
 
 
 // MONGODB CONNECTION
-mongoose.connect(process.env.MONGODB_CONNECTION, {autoIndex: true})
-.then( () => {
-    console.log(`MongodB connected`);
-}).catch(error => {
-    console.log(error);
-})
+const options = {
+    user: DB_USER,
+    pass: DB_PASS,
+    autoIndex: true,
+    serverSelectionTimeoutMS: 30000
+}
+
+mongoose.connect(MONGODB_CONNECTION, options)
+    .then(() => console.log("DB connected"))
+    .catch((e) => console.error(err));
 
 
 // SET APPLICATION STORAGE
